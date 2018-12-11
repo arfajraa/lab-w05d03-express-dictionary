@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Edit Term</title>
 </head>
+
 <body>
-  
+  <form action="/terms/{{id}}?_method=PUT" method="POST">
+    <label for="name">Name: <input type="text" name="name" id="name" value="{{name}}"></label>
+    <label for="definition">Definition: <input type="text" name="definition" id="definition" value={{definition}}></label>
+    <button type="submit">Update Term</button>
+  </form>
 </body>
+
 </html>
